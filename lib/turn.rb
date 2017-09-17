@@ -3,10 +3,13 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   position_taken?(board,index)
-  valid_move?(board,index)
-  move(board,index)
-
+  if valid_move?(board,index)
+    move(board,index)
+ else
+   turn(board) 
 end
+
+# do corrections if any
      def move(board,index,value="X")
       board[index]=value
       return board
