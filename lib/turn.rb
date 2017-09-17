@@ -8,8 +8,9 @@ def turn(board)
  else
    turn(board)
 end
+end
 
-# do corrections if any
+# do corrections if any else without rescue means if ke baad kahi end aa gaya ya phir else ke baad end choot gaya ok
      def move(board,index,value="X")
       board[index]=value
       return board
